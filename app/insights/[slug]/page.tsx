@@ -65,6 +65,19 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
           </section>
         ))}
         <blockquote>{insight.takeaway}</blockquote>
+        {"sources" in insight && insight.sources.length > 0 && (
+          <section className="article-sources" aria-labelledby="official-sources">
+            <h2 id="official-sources">공식 출처</h2>
+            <p>아래 자료는 {insight.sources[0].checkedAt.replaceAll("-", ".")} 기준으로 확인했습니다. 세부 조건은 신청 시점의 최신 공고를 다시 확인해 주세요.</p>
+            <ul>
+              {insight.sources.map((source) => (
+                <li key={source.url}>
+                  <a href={source.url} target="_blank" rel="noreferrer">{source.label}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </article>
       <nav className="article-bottom" aria-label="글 하단 이동">
         <Link href="/insights">← 다른 인사이트 보기</Link>
