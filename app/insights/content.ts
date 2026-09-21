@@ -326,7 +326,8 @@ export const insights = [
         checkedAt: "2026-09-14",
       },
     ],
-  }  {
+  },
+  {
     slug: "small-business-owner-independent-operations",
     category: "소상공인 경영",
     title: "대표가 하루 자리를 비워도 가게가 흔들리지 않는 운영 기준 5가지",
