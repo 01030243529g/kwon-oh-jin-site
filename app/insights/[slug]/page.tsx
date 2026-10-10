@@ -72,7 +72,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
             <ul>
               {insight.sources.map((source) => (
                 <li key={source.url}>
-                  <a href={source.url} target="_blank" rel="noreferrer">{source.label}</a>
+                  <a href={source.url} target="_blank" rel="noreferrer">{source.label} <strong>공식자료 열기 ↗</strong></a>
                 </li>
               ))}
             </ul>
